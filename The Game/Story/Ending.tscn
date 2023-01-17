@@ -1,0 +1,105 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Font/PressStart2P-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Font/VT323-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Story/Ending.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 20
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 12
+extra_spacing_top = -2
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 35
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[node name="Node" type="Node"]
+script = ExtResource( 3 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 480.0
+margin_bottom = 270.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 15.0
+margin_top = 15.0
+margin_right = 465.0
+margin_bottom = 255.0
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+margin_right = 450.0
+margin_bottom = 26.0
+custom_constants/margin_bottom = 6
+
+[node name="Label" type="Label" parent="VBoxContainer/MarginContainer"]
+margin_right = 450.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "End"
+align = 1
+
+[node name="Text" type="MarginContainer" parent="VBoxContainer"]
+margin_top = 30.0
+margin_right = 450.0
+margin_bottom = 136.0
+custom_constants/margin_bottom = 25
+
+[node name="Text" type="Label" parent="VBoxContainer/Text"]
+margin_right = 450.0
+margin_bottom = 81.0
+size_flags_vertical = 1
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Eva berhasil mengirim obat ke Sky Village dan obat itu diserahkan kepada yang terkena penyakit. Serta akhirnya Eva mengetahui misteri mengenai portal yang dapat berfungsi kembali, diberitahu oleh ilmuwan yang berada di Sky Village.
+
+Ternyata saat terjadinya badai tidak hanya mengakibatkan longsor, tapi juga mengaktifkan kembali portal. 12 Tahun yang lalu portal - portal itu rusak juga akibat badai. "
+autowrap = true
+
+[node name="Button" type="HBoxContainer" parent="."]
+margin_left = 15.0
+margin_top = 209.0
+margin_right = 465.0
+margin_bottom = 255.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Right Button5" type="MarginContainer" parent="Button"]
+margin_right = 411.0
+margin_bottom = 46.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_left = 95
+
+[node name="Right Button" type="Button" parent="Button"]
+margin_left = 415.0
+margin_right = 450.0
+margin_bottom = 46.0
+focus_mode = 0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 1, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 1, 0, 0, 1 )
+custom_fonts/font = SubResource( 8 )
+custom_styles/hover = SubResource( 9 )
+custom_styles/pressed = SubResource( 10 )
+custom_styles/normal = SubResource( 11 )
+text = ">"
+align = 2
+icon_align = 1
+
+[connection signal="pressed" from="Button/Right Button" to="." method="_on_Right_Button_pressed"]

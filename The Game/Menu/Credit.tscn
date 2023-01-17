@@ -1,0 +1,145 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Font/PressStart2P-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Font/VT323-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://img/Menu1.png" type="Texture" id=3]
+[ext_resource path="res://Menu/Credit.gd" type="Script" id=4]
+
+[sub_resource type="DynamicFont" id=11]
+size = 11
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=13]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=12]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 1, 1, 1, 0 )
+
+[sub_resource type="DynamicFont" id=14]
+size = 12
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=15]
+size = 12
+font_data = ExtResource( 2 )
+
+[node name="Credit" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="Menu1" type="Sprite" parent="."]
+position = Vector2( 234.778, 143 )
+scale = Vector2( 1.58889, 1.58889 )
+texture = ExtResource( 3 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 480.0
+margin_bottom = 41.0
+color = Color( 0.223529, 0.211765, 0.313726, 1 )
+
+[node name="Back" type="MarginContainer" parent="."]
+margin_left = 7.0
+margin_top = 15.0
+margin_right = 473.0
+margin_bottom = 23.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 400
+custom_constants/margin_top = 0
+
+[node name="Back" type="Button" parent="Back"]
+margin_right = 66.0
+margin_bottom = 11.0
+focus_mode = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 0.513726 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 0.513726 )
+custom_fonts/font = SubResource( 11 )
+custom_styles/hover = SubResource( 13 )
+custom_styles/pressed = SubResource( 12 )
+custom_styles/normal = SubResource( 10 )
+text = "< Back"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 7.0
+margin_top = 64.0
+margin_right = 257.0
+margin_bottom = 203.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_right = 250.0
+margin_bottom = 139.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 11
+
+[node name="Left" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+margin_right = 74.0
+margin_bottom = 139.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 10
+
+[node name="Left1" type="Label" parent="VBoxContainer/HBoxContainer/Left"]
+margin_right = 74.0
+margin_bottom = 13.0
+custom_colors/font_color = Color( 0.333333, 0.305882, 0.541176, 1 )
+custom_fonts/font = SubResource( 14 )
+text = "Game by"
+align = 2
+
+[node name="Left2" type="Label" parent="VBoxContainer/HBoxContainer/Left"]
+margin_top = 23.0
+margin_right = 74.0
+margin_bottom = 36.0
+custom_colors/font_color = Color( 0.333333, 0.305882, 0.541176, 1 )
+custom_fonts/font = SubResource( 14 )
+text = "Sound Effects"
+align = 2
+
+[node name="Left3" type="Label" parent="VBoxContainer/HBoxContainer/Left"]
+margin_top = 46.0
+margin_right = 74.0
+margin_bottom = 59.0
+custom_colors/font_color = Color( 0.333333, 0.305882, 0.541176, 1 )
+custom_fonts/font = SubResource( 14 )
+text = "Google Fonts"
+align = 2
+
+[node name="Right" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+margin_left = 85.0
+margin_right = 250.0
+margin_bottom = 139.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 10
+
+[node name="Right1" type="Label" parent="VBoxContainer/HBoxContainer/Right"]
+margin_right = 165.0
+margin_bottom = 13.0
+custom_colors/font_color = Color( 0.223529, 0.211765, 0.313726, 1 )
+custom_fonts/font = SubResource( 15 )
+text = "Muhammad Afif"
+
+[node name="Right2" type="Label" parent="VBoxContainer/HBoxContainer/Right"]
+margin_top = 23.0
+margin_right = 165.0
+margin_bottom = 36.0
+custom_colors/font_color = Color( 0.223529, 0.211765, 0.313726, 1 )
+custom_fonts/font = SubResource( 15 )
+text = "https://sfbgames.itch.io/chiptone"
+
+[node name="Right3" type="Label" parent="VBoxContainer/HBoxContainer/Right"]
+margin_top = 46.0
+margin_right = 165.0
+margin_bottom = 75.0
+custom_colors/font_color = Color( 0.223529, 0.211765, 0.313726, 1 )
+custom_fonts/font = SubResource( 15 )
+text = "VT323
+Press Start 2P"
+
+[connection signal="pressed" from="Back/Back" to="." method="_on_Back_pressed"]

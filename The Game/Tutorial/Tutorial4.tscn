@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://img/arrow.png" type="Texture" id=1]
+[ext_resource path="res://Font/VT323-Regular.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 13
+font_data = ExtResource( 2 )
+
+[node name="Tutorial 4" type="Node2D"]
+position = Vector2( -22, -3 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -26.0
+margin_top = -13.0
+margin_right = 60.0
+margin_bottom = 38.0
+color = Color( 1, 1, 1, 0.901961 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -13, 1 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 10, 10, 10 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( -13, 24 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 20, 10, 10 )
+
+[node name="Label" type="Label" parent="."]
+margin_top = -9.0
+margin_right = 47.0
+margin_bottom = 10.0
+custom_colors/font_color = Color( 0.223529, 0.211765, 0.313726, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Up ladder"
+valign = 1
+
+[node name="Label2" type="Label" parent="."]
+margin_top = 14.0
+margin_right = 47.0
+margin_bottom = 33.0
+custom_colors/font_color = Color( 0.223529, 0.211765, 0.313726, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Down ladder"
+valign = 1

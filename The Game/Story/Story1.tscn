@@ -1,0 +1,160 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Font/PressStart2P-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Font/VT323-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Story/Story1.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 20
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 12
+extra_spacing_top = -2
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 35
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 8
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 35
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[node name="Node" type="Node"]
+script = ExtResource( 3 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 480.0
+margin_bottom = 270.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 15.0
+margin_top = 15.0
+margin_right = 465.0
+margin_bottom = 255.0
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+margin_right = 450.0
+margin_bottom = 26.0
+custom_constants/margin_bottom = 6
+
+[node name="Label" type="Label" parent="VBoxContainer/MarginContainer"]
+margin_right = 450.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Story"
+align = 1
+
+[node name="Text" type="MarginContainer" parent="VBoxContainer"]
+margin_top = 30.0
+margin_right = 450.0
+margin_bottom = 220.0
+custom_constants/margin_bottom = 25
+
+[node name="Text" type="Label" parent="VBoxContainer/Text"]
+margin_right = 450.0
+margin_bottom = 165.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Pada suatu saat terdapat longsor, akibat badai yang meyebabkan terputusnya akses jalan antara Sky Village dan Valley Village. Sky Village berada di pegunungan.
+
+Suatu hari Eva mendapatkan tugas lewat telfon untuk mengirim obat dari Valley Village ke Sky Village. Sayangnya di hari saat Eva berencana ingin mengirim obat tersebut gagal karena terjadinya longsor. Keesokan harinya Eva mencoba mencari jalan lain melewati hutan untuk menuju Sky Village.
+
+Obat yang dikirim Eva ini diperuntukan untuk 3 warga Sky Village yang sedang terkena suatu jenis penyakit yang membuat pengidapnya demam. salah 1 dari 3 warga tersebut adalah temannya Eva.
+"
+autowrap = true
+
+[node name="Button" type="HBoxContainer" parent="."]
+margin_left = 15.0
+margin_top = 209.0
+margin_right = 465.0
+margin_bottom = 255.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Left Button" type="MarginContainer" parent="Button"]
+margin_right = 147.0
+margin_bottom = 46.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 95
+
+[node name="Left Button" type="Button" parent="Button/Left Button"]
+margin_right = 52.0
+margin_bottom = 46.0
+focus_mode = 0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 1, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 1, 0, 0, 1 )
+custom_fonts/font = SubResource( 3 )
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
+text = "<"
+icon_align = 1
+
+[node name="Label" type="Label" parent="Button"]
+margin_left = 151.0
+margin_right = 298.0
+margin_bottom = 46.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "1 / 2"
+align = 1
+valign = 1
+
+[node name="Right Button" type="MarginContainer" parent="Button"]
+margin_left = 302.0
+margin_right = 450.0
+margin_bottom = 46.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_left = 95
+
+[node name="Right Button" type="Button" parent="Button/Right Button"]
+margin_left = 95.0
+margin_right = 148.0
+margin_bottom = 46.0
+focus_mode = 0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 1, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 1, 0, 0, 1 )
+custom_fonts/font = SubResource( 8 )
+custom_styles/hover = SubResource( 9 )
+custom_styles/pressed = SubResource( 10 )
+custom_styles/normal = SubResource( 11 )
+text = ">"
+icon_align = 1
+
+[connection signal="pressed" from="Button/Left Button/Left Button" to="." method="_on_Left_Button_pressed"]
+[connection signal="pressed" from="Button/Right Button/Right Button" to="." method="_on_Right_Button_pressed"]

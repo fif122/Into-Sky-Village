@@ -78,14 +78,14 @@ size_flags_vertical = 3
 custom_constants/separation = 11
 
 [node name="Left" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
-margin_right = 74.0
+margin_right = 119.0
 margin_bottom = 139.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 10
 
 [node name="Left1" type="Label" parent="VBoxContainer/HBoxContainer/Left"]
-margin_right = 74.0
+margin_right = 119.0
 margin_bottom = 13.0
 custom_colors/font_color = Color( 0.333333, 0.305882, 0.541176, 1 )
 custom_fonts/font = SubResource( 14 )
@@ -94,7 +94,7 @@ align = 2
 
 [node name="Left2" type="Label" parent="VBoxContainer/HBoxContainer/Left"]
 margin_top = 23.0
-margin_right = 74.0
+margin_right = 119.0
 margin_bottom = 36.0
 custom_colors/font_color = Color( 0.333333, 0.305882, 0.541176, 1 )
 custom_fonts/font = SubResource( 14 )
@@ -103,7 +103,7 @@ align = 2
 
 [node name="Left3" type="Label" parent="VBoxContainer/HBoxContainer/Left"]
 margin_top = 46.0
-margin_right = 74.0
+margin_right = 119.0
 margin_bottom = 59.0
 custom_colors/font_color = Color( 0.333333, 0.305882, 0.541176, 1 )
 custom_fonts/font = SubResource( 14 )
@@ -111,7 +111,7 @@ text = "Google Fonts"
 align = 2
 
 [node name="Right" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
-margin_left = 85.0
+margin_left = 130.0
 margin_right = 250.0
 margin_bottom = 139.0
 size_flags_horizontal = 3
@@ -119,7 +119,7 @@ size_flags_vertical = 3
 custom_constants/separation = 10
 
 [node name="Right1" type="Label" parent="VBoxContainer/HBoxContainer/Right"]
-margin_right = 165.0
+margin_right = 120.0
 margin_bottom = 13.0
 custom_colors/font_color = Color( 0.223529, 0.211765, 0.313726, 1 )
 custom_fonts/font = SubResource( 15 )
@@ -127,15 +127,15 @@ text = "Muhammad Afif"
 
 [node name="Right2" type="Label" parent="VBoxContainer/HBoxContainer/Right"]
 margin_top = 23.0
-margin_right = 165.0
+margin_right = 120.0
 margin_bottom = 36.0
 custom_colors/font_color = Color( 0.223529, 0.211765, 0.313726, 1 )
 custom_fonts/font = SubResource( 15 )
-text = "https://sfbgames.itch.io/chiptone"
+text = "ChipTone - SFB Games"
 
 [node name="Right3" type="Label" parent="VBoxContainer/HBoxContainer/Right"]
 margin_top = 46.0
-margin_right = 165.0
+margin_right = 120.0
 margin_bottom = 75.0
 custom_colors/font_color = Color( 0.223529, 0.211765, 0.313726, 1 )
 custom_fonts/font = SubResource( 15 )
